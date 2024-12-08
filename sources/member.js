@@ -1,9 +1,13 @@
 members = [
-    {ten:"", gioiTinh:"", ngaySinh:"", contact:""},
-    {ten:"", gioiTinh:"", ngaySinh:"", contact:""},
-    {ten:"", gioiTinh:"", ngaySinh:"", contact:""},
-    {ten:"", gioiTinh:"", ngaySinh:"", contact:""},
-    {ten:"", gioiTinh:"", ngaySinh:"", contact:""},
+    {ten:"Ngô Kiều Oanh", gioiTinh:"nữ", ngaySinh:"", contact:"", image:""},
+    {ten:"Trần Ngọc Đan Thanh", gioiTinh:"nữ", ngaySinh:"", contact:"", image:""},
+    {ten:"Nguyễn Hoàng Bảo Vy", gioiTinh:"nữ", ngaySinh:"", contact:"", image:""},
+    {ten:"Vy Đỗ Phương Thảo", gioiTinh:"nữ", ngaySinh:"", contact:"", image:""},
+    {ten:"Trần Diệp Hải Lam", gioiTinh:"nữ", ngaySinh:"", contact:"", image:""},
+    {ten:"Trần Thụy Minh Nguyệt", gioiTinh:"nữ", ngaySinh:"", contact:"", image:""},
+    {ten:"Lê Ngọc Nhi", gioiTinh:"nữ", ngaySinh:"", contact:"", image:""},
+    {ten:"Hoàng Thị Kiều Nhi", gioiTinh:"nữ", ngaySinh:"", contact:"", image:""},
+    {ten:"Lâm Ngọc Thanh Tâm", gioiTinh:"nữ", ngaySinh:"", contact:"", image:""},
 ]
 
 function showDetail (member_id) {
@@ -12,10 +16,10 @@ function showDetail (member_id) {
         <div class="members__detail__container">
             <img src="" alt="anh thanh vien">
             <div class="members__detail__content">
-                <p class="member__detail">Tên: ${member_id.ten}</p>
-                <p class="member__detail">Ngày sinh: ${member_id.ngaySinh}</p>
-                <p class="member__detail">Giới tính: ${member_id.gioiTinh}</p>
-                <a class="member__detail" href="${member_id.contact}">
+                <p class="member__detail">Tên: ${members[member_id].ten}</p>
+                <p class="member__detail">Ngày sinh: ${members[member_id].ngaySinh}</p>
+                <p class="member__detail">Giới tính: ${members[member_id].gioiTinh}</p>
+                <a class="member__detail" href="${members[member_id].contact}">
                     <i class="fa-brands fa-facebook"></i>
                     Liên hệ
                 </a>
@@ -28,6 +32,12 @@ function showDetail (member_id) {
     member_detail.addEventListener("click", () => {
         member_detail.style = "display: none";
     })
+    
+    document.addEventListener("keyup", (e) => {
+        if (e.keyCode == 27) {
+            member_detail.style = "display:none";
+        }
+    })
     document.querySelector(".members__detail__container").addEventListener("click", (e) => {
         e.stopPropagation();
     })
@@ -35,7 +45,7 @@ function showDetail (member_id) {
 
 let member_btns = document.querySelectorAll(".members__list li");
 member_btns.forEach((btn, index) => {
-    btn.addEventListener("click", (index) => {
+    btn.addEventListener("click", () => {
         showDetail(index);
     })
 })
