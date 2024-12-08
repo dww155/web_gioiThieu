@@ -25,3 +25,41 @@ h1 {
 .members__list li:hover {
     padding: 20px 12px;
 }
+
+#members__detail {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    display: none;
+    animation: .3s fadeIn;
+}
+.members__detail__container {
+    background-color: #fff;
+    max-width: 100%;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    border-radius: 10px;
+    animation: .3s popIn;
+}
+.members__detail__container img {
+    width: 400px;
+    height: 400px;
+}
+.members__detail__content {
+}
+.member__detail {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+a.member__detail {
+    text-decoration: none;
+    color: blue;
+}
+a.member__detail:hover {
+    color: rgb(104, 104, 255);
+}
