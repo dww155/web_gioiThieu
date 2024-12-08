@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/memers.css">
+    <link rel="stylesheet" href="./assets/css/feedback.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <ul class="header__list">
+                <li onclick="showPage('home')">Trang chủ</li>
+                <li onclick="showPage('members')">Thành viên</li>
+                <li onclick="showPage('feedback')">Góp ý</li>
+            </ul>
+        </div>
+        <div id="content">
+            <div id="home" class="hidden">
+                Trang giới thiệu....
+            </div>
+            <div id="members" class="hidden">
+                <h1>Danh sách các thành viên</h1>
+                <ul class="members__list">
+                    <li>
+                        <img src="" alt="ảnh của Ngô Kiều Oanh">
+                        Ngô Kiều Oanh
+                    </li>
+                    <li>
+                        <img src="" alt="ảnh của Trần Ngọc Đan Thanh">
+                        Trần Ngọc Đan Thanh
+                    </li>
+                    <li>
+                        <img src="" alt="ảnh của Nguyễn Hoàng Bảo Vy">
+                        Nguyễn Hoàng Bảo Vy
+                    </li>
+                    <li>
+                        <img src="" alt="ảnh của Vy Đỗ Phương Thảo">
+                        Vy Đỗ Phương Thảo
+                    </li>
+                    <li>
+                        <img src="" alt="ảnh của Trần Diệp Hải Lam">
+                        Trần Diệp Hải Lam
+                    </li>
+                    <li>
+                        <img src="" alt="ảnh của Trần Thụy Minh Nguyệt">
+                        Trần Thụy Minh Nguyệt
+                    </li>
+                    <li>
+                        <img src="" alt="ảnh của Lê Ngọc Nhi">
+                        Lê Ngọc Nhi
+                    </li>
+                    <li>
+                        <img src="" alt="ảnh của Hoàng Thị Kiều Nhi">
+                        Hoàng Thị Kiều Nhi
+                    </li>
+                    <li>
+                        <img src="" alt="ảnh của Lâm Ngọc Thanh Tâm">
+                        Lâm Ngọc Thanh Tâm
+                    </li>
+                </ul>
+                <div id="members__detail"></div>
+            </div>
+            
+            <div id="feedback" class="hidden">
+                <form action="" name="feedback_form">
+                    <div class="info">
+                        <label for="fullName">Họ và tên:</label>
+                        <input type="text" id="fullName">
+                    </div>
+                    <div class="info">
+                        <label for="email">Email:</label>
+                        <input type="text" id="email">
+                    </div>
+                    <div class="feedback__content">
+                        <div>
+                            <label for="feedback__title">Tiêu đề:</label>
+                            <input id="feedback__title" class="header" type="text" name="">
+                        </div>
+
+                        <div>
+                            <label for="feedback__content">Nội dung:</label>
+                            <textarea name="" id="feedback__content"></textarea>
+                        </div>
+                        <input id="feedback__sender" type="submit" value="Gửi phản hồi">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="footer"></div>
+    </div>
+</body>
+<script src="./sources/main.js"></script>
+<script src="./sources/member.js"></script>
+</html>

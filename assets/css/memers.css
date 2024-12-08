@@ -1,0 +1,27 @@
+h1 {
+    color: #333;
+    text-align: center;
+}
+.members__list {
+    list-style-type: none;
+    padding-left: 0;
+    width: 50%;
+    margin: auto;
+}
+.members__list li {
+    display: flex;
+    align-items: center;
+    background-color: bisque;
+    border: 1px solid #ddd;
+    margin: 8px 0;
+    padding: 12px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: .3s ease;
+    user-select: none;
+    cursor: pointer;
+}
+.members__list li:hover {
+    padding: 20px 12px;
+}
