@@ -22,8 +22,20 @@ h1 {
     user-select: none;
     cursor: pointer;
 }
+.members__list img {
+    width: 75px;
+    height: 75px;
+    margin: 0 10px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: .3s ease;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
+}
 .members__list li:hover {
     padding: 20px 12px;
+}
+.members__list li:hover img {
+    transform: scale(1.2);
 }
 
 #members__detail {
@@ -45,21 +57,51 @@ h1 {
     display: flex;
     border-radius: 10px;
     animation: .3s popIn;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
 }
 .members__detail__container img {
-    width: 400px;
-    height: 400px;
+    height: 80vh;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-right: 10px;
 }
 .members__detail__content {
+    background-color: var(--color-green);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
+    position:relative;
 }
 .member__detail {
     margin-bottom: 20px;
     font-size: 20px;
 }
+.members__detail__cancel {
+    position: absolute;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 20px;
+    background-color: red;
+    color: #fff;
+    bottom: 10px;
+    right: 10px;
+    border:none;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
+}
+.members__detail__cancel:hover {
+    background-color: rgb(255, 113, 113);
+}
 a.member__detail {
     text-decoration: none;
     color: blue;
+    background-color: var(--color-purple);
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
 }
 a.member__detail:hover {
     color: rgb(104, 104, 255);
+    box-shadow: 2px 2px 4px;
 }

@@ -32,55 +32,83 @@
                 <h1>Danh sách các thành viên</h1>
                 <ul class="members__list">
                     <li>
-                        <img src="" alt="ảnh của Ngô Kiều Oanh">
-                        Ngô Kiều Oanh
+                        <span>1</span>
+                        <img src="./assets/images/Oanh.jpg" alt="ảnh của Ngô Kiều Oanh">
+                        <h3>
+                            Ngô Kiều Oanh
+                        </h2>
                     </li>
                     <li>
-                        <img src="" alt="ảnh của Trần Ngọc Đan Thanh">
-                        Trần Ngọc Đan Thanh
+                        <span>2</span>
+                        <img src="./assets/images/Thanh.jpg" alt="ảnh của Trần Ngọc Đan Thanh">
+                        <h3>
+                            Trần Ngọc Đan Thanh
+                        </h2>
                     </li>
                     <li>
-                        <img src="" alt="ảnh của Nguyễn Hoàng Bảo Vy">
-                        Nguyễn Hoàng Bảo Vy
+                        <span>3</span>
+                        <img src="./assets/images/Vy.jpg" alt="ảnh của Nguyễn Hoàng Bảo Vy">
+                        <h3>
+                            Nguyễn Hoàng Bảo Vy
+                        </h2>
                     </li>
                     <li>
-                        <img src="" alt="ảnh của Vy Đỗ Phương Thảo">
-                        Vy Đỗ Phương Thảo
+                        <span>4</span>
+                        <img src="./assets/images/Thao.jpg" alt="ảnh của Vy Đỗ Phương Thảo">
+                        <h3>
+                            Vy Đỗ Phương Thảo
+                        </h2>
                     </li>
                     <li>
-                        <img src="" alt="ảnh của Trần Diệp Hải Lam">
-                        Trần Diệp Hải Lam
+                        <span>5</span>
+                        <img src="./assets/images/Lam.jpg" alt="ảnh của Trần Diệp Hải Lam">
+                        <h3>
+                            Trần Diệp Hải Lam
+                        </h2>
                     </li>
                     <li>
-                        <img src="" alt="ảnh của Trần Thụy Minh Nguyệt">
-                        Trần Thụy Minh Nguyệt
+                        <span>6</span>
+                        <img src="./assets/images/Nguyet.jpg" alt="ảnh của Trần Thụy Minh Nguyệt">
+                        <h3>
+                            Trần Thụy Minh Nguyệt
+                        </h2>
                     </li>
                     <li>
-                        <img src="" alt="ảnh của Lê Ngọc Nhi">
-                        Lê Ngọc Nhi
+                        <span>7</span>
+                        <img src="./assets/images/NNhi.jpg" alt="ảnh của Lê Ngọc Nhi">
+                        <h3>
+                            Lê Ngọc Nhi
+                        </h2>
                     </li>
                     <li>
-                        <img src="" alt="ảnh của Hoàng Thị Kiều Nhi">
-                        Hoàng Thị Kiều Nhi
+                        <span>8</span>
+                        <img src="./assets/images/KNhi.jpg" alt="ảnh của Hoàng Thị Kiều Nhi">
+                        <h3>
+                            Hoàng Thị Kiều Nhi
+                        </h2>
                     </li>
                     <li>
-                        <img src="" alt="ảnh của Lâm Ngọc Thanh Tâm">
-                        Lâm Ngọc Thanh Tâm
+                        <span>9</span>
+                        <img src="./assets/images/Tam.jpg" alt="ảnh của Lâm Ngọc Thanh Tâm">
+                        <h3>
+                            Lâm Ngọc Thanh Tâm
+                        </h2>
                     </li>
                 </ul>
                 <div id="members__detail">
                     <div class="members__detail__container">
-                        <img src="" alt="anh thanh vien">
+                        <img src="${members[member_id].image}" alt="anh thanh vien">
                         <div class="members__detail__content">
-                            <p class="member__detail">Tên: </p>
-                            <p class="member__detail">Ngày sinh: </p>
-                            <p class="member__detail">Giới tính: </p>
-                            <a class="member__detail" href="#">
+                            <p class="member__detail">Tên: ${members[member_id].ten}</p>
+                            <p class="member__detail">Ngày sinh: ${members[member_id].ngaySinh}</p>
+                            <p class="member__detail">Giới tính: ${members[member_id].gioiTinh}</p>
+                            <a class="member__detail" href="${members[member_id].contact}">
                                 <i class="fa-brands fa-facebook"></i>
                                 Liên hệ
                             </a>
+                            <button class="members__detail__cancel">Đóng</button>
                         </div>
-                    </div>
+                    </div>                
                 </div>
             </div>
             
@@ -104,7 +132,8 @@
                             <label for="feedback__content">Nội dung:</label>
                             <textarea name="" id="feedback__content"></textarea>
                         </div>
-                        <input id="feedback__sender" type="submit" value="Gửi phản hồi">
+                        <input class="feedback__btn" id="feedback__sender" type="submit" value="Gửi phản hồi">
+                        <input onclick="clearFeedback()" class="feedback__btn" id="feedback__clearer" type="button" value="Xóa phản hồi">
                     </div>
                 </form>
             </div>

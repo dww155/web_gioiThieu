@@ -59,7 +59,7 @@
     height: 300px;
 } 
 
-#feedback__sender {
+.feedback__btn {
     margin: 10px auto;
     padding: 5px 10px ;
     background-color: var(--color-darkPurple);
@@ -69,7 +69,10 @@
     box-shadow: 2px 2px 2px rgba(0,0,0,.5);
     transition: .3s ease;
 }
-#feedback__sender:hover {
+.feedback__btn:hover {
     background-color: var(--color-purple);
     color: #333;
+}
+#feedback__clearer{
+    background-color: rgb(255, 20, 83);
 }

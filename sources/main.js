@@ -1,4 +1,4 @@
-function showPage(page) {
+    function showPage(page) {
     let active_pages = document.querySelectorAll(".show");
     let page_toShow = document.getElementById(page);
 

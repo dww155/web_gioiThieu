@@ -1,8 +1,8 @@
+var fullName = document.getElementById("fullName");
+var email = document.getElementById("email");
+var title = document.getElementById("feedback__title");
+var content = document.getElementById("feedback__content");
 function checkFeedBack() {
-    let fullName = document.getElementById("fullName");
-    let email = document.getElementById("email");
-    let title = document.getElementById("feedback__title");
-    let content = document.getElementById("feedback__content");
 
     if (fullName.value == "") {
         alert("Hãy điền họ và tên");
@@ -27,4 +27,10 @@ function checkFeedBack() {
 
     alert("Cám ơn bạn đã phản hồi. Góp ý của bạn đã được ghi nhận <3")
     return true;
+}
+function clearFeedback() {
+    fullName.value = "";
+    email.value = "";
+    title.value = "";
+    content.value = "";
 }
